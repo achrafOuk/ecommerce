@@ -10,6 +10,7 @@ class Main
     public function start()
     {
            // URL/controller/method/parametres
+ 
 
            session_start();
            $requested = $_SERVER["REQUEST_URI"];
@@ -57,16 +58,15 @@ class Main
             //Si il y a pas de request, on  va dériger l'utilisateur vers la page prinicpale
            if( empty($params) )
            {
-                $controller = new Controller();
-
-                echo "Home page";
+            $controller = new Controller();
+            //rendre the home page
+            $controller->index();
            }
            else
            {
                try{
                     $Controller = "app\\Controllers\\" . ucfirst( $params[0] )."Controller";
                     $controller = new $Controller();
-                    
                     if ( isset($params[1]) )
                     {
                         
@@ -79,7 +79,8 @@ class Main
                         else{
                             if( $params[0]=="item" && preg_match("/\d+/",$params[1] ) )
                             {
-                             $controller->show($params[1]);
+                                
+                                $controller->show($params[1]);
                             }
 
                             #echo "404! error page";
@@ -89,6 +90,7 @@ class Main
                //show a 404 page when controller is not found
                catch( \Throwable $e)
                 {
+                    echo $e->getMessage()."</br>";
                     echo "404! error page";
                 }
            }

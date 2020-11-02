@@ -4,7 +4,7 @@ namespace app\Controllers;
 
 class AdminController
 {
-
+    
 }
 
 ?>
