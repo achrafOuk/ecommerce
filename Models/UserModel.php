@@ -11,7 +11,7 @@ class UserModel extends Model
     public function  __const()
     {
         parent::__construct();
-        $table="user";
+        $this->table="compte";
     }
     
 }

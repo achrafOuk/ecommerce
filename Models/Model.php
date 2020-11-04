@@ -14,25 +14,26 @@ class Model
 
     protected $table;
     protected  $conn;
-    public function __const()
+    public function __construct()
     {/*
 
         create databse here
     */
-        $this->conn = new mysqli(DB_HOST,DB_NAME,DB_USER,DB_PSW);
-       // if($conn->connect_error)
+        
+        $this->conn = new \mysqli(Model::DB_HOST,Model::DB_USER,Model::DB_PSW,Model::DB_NAME);
+        $myconnect = $this->conn;
     }
     //return the instance of the class
     public function getinstence()
     {
         return $this->conn;
     }
-
-    public function getAllByLimit($start,$end)
+    
+    public function showByLimit($start,$end)
     {
-        $sql_query = "select * from ".$table." limit ".$start.",".$end;
+        $sql_query = "select * from ".$this->table." limit ".$start.",".$end;
         $result = $this->conn->query($sql_query);
-         return $result->fetchAll();
+        return $result->fetch_all();
     }
     public function __destruct()
     {

@@ -8,7 +8,7 @@ class CategoriesModel extends Model
     public function  __const()
     {
         parent::__construct();
-        $table="Categories";
+        $this->table = "Categories";
 
     }
     

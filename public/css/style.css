@@ -1,0 +1,59 @@
+:root
+{
+    --sec-color:#dfe6e9;
+    --main-color:#636e72;
+    --blue:#0984e3;
+}
+body{
+    background:var(--sec-color);
+    margin: 0;
+    padding: 0;
+}
+body a
+{
+    text-decoration: none;
+    color:#fff;
+}
+nav {
+    background: var(--main-color);
+    display: flex;
+    color: #fff;
+    padding: 1.5% 0% 0% 1.5%;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+#siteName, #search, #shart {
+    margin-right: 22%;
+}
+#search {
+    display: flex;
+    width: 35%;
+}
+
+input[type="text"] {
+    padding: 3%;
+}
+input[type="button"] {
+    background: var(--blue);
+    border: none;
+    color: #fff;
+    padding: 3% 5% 3% 3%;
+}
+#product {
+    background: white;
+    margin: 5% 10% 10% 10%;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+#item {
+    display: flex;
+    line-height: 3;
+    padding: 2%;
+}
+footer {
+    background: var(--main-color);
+    text-align: center;
+    padding: 1%;
+    color: #fff;
+}

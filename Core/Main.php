@@ -62,11 +62,13 @@ class Main
             //rendre the home page
             $controller->index();
            }
+           
            else
            {
                try{
                     $Controller = "app\\Controllers\\" . ucfirst( $params[0] )."Controller";
                     $controller = new $Controller();
+                    
                     if ( isset($params[1]) )
                     {
                         
@@ -75,16 +77,19 @@ class Main
                             (isset($params[2]) ) ? $controller->$params[1]($params[2]) : $controller->$params[1]();
                             echo "methode existe";
                         }
-
                         else{
-                            if( $params[0]=="item" && preg_match("/\d+/",$params[1] ) )
+                            if(  preg_match("/\d+/",$params[1] ) )
                             {
                                 
                                 $controller->show($params[1]);
                             }
-
+                            
                             #echo "404! error page";
                         }
+                    }
+                    else
+                    {
+                        $controller->index();
                     }
                }
                //show a 404 page when controller is not found
