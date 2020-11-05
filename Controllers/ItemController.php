@@ -33,10 +33,10 @@ class ItemController extends Controller
     {
         //do something
     }
-    //create new user
+    
     public function create()
     {
-        //do something
+        //create new item
     }
     public function delete()
     {

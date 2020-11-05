@@ -28,13 +28,19 @@ class Model
     {
         return $this->conn;
     }
-    
+    public function fetchAll()
+    {
+        $sql_query = "select * from ".$this->table;
+        $result = $this->conn->query($sql_query);
+        return $result->fetch_all();
+    }
     public function showByLimit($start,$end)
     {
         $sql_query = "select * from ".$this->table." limit ".$start.",".$end;
         $result = $this->conn->query($sql_query);
         return $result->fetch_all();
     }
+
     public function __destruct()
     {
         if (!empty($this->conn))

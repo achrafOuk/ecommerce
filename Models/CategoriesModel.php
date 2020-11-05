@@ -5,10 +5,11 @@ class CategoriesModel extends Model
     protected $categorie_id;
     protected $categorie_name;
 
-    public function  __const()
+    public function  __construct()
     {
+        
         parent::__construct();
-        $this->table = "Categories";
+        $this->table = "categories";
 
     }
     
