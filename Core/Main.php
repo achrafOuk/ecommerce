@@ -54,7 +54,7 @@ class Main
            //look for the Controller wanted
 
            // controller\method\{params}
- 
+           
             //Si il y a pas de request, on  va dériger l'utilisateur vers la page prinicpale
            if( empty($params) )
            {
@@ -65,29 +65,26 @@ class Main
            
            else
            {
+               
                try{
                     $Controller = "app\\Controllers\\" . ucfirst( $params[0] )."Controller";
                     $controller = new $Controller();
-                    
                     if ( isset($params[1]) )
                     {
-                        
                         if( method_exists($controller,$params[1]) )
                         {
-                            (isset($params[2]) ) ? $controller->$params[1]($params[2]) : $controller->$params[1]();
-                            echo "methode existe";
+                            $action = $params[1];
+                            if ( isset($params[2]) ) $param=$params[2];
+                            ( isset($params[2]) ) ? call_user_func_array([$controller, $action], [$param])  : $controller->$action();
                         }
                         else{
                             if(  preg_match("/\d+/",$params[1] ) )
                             {
-                                
                                 $controller->show($params[1]);
                             }
-                            
-                            #echo "404! error page";
                         }
                     }
-                    else
+                    else if( method_exists($controller,index ) )
                     {
                         $controller->index();
                     }

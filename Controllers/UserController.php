@@ -2,19 +2,13 @@
 
 namespace app\Controllers;
 
-class UserController extends Controller
+class UserController 
 {
-    public function show($index)
-    {
-          //do something
-    }
-    public function showLimit($start,$end)
-    {
-        //do something
-    }
     public function login()
     {
         //do something
+        $file = dirname(__DIR__).DIRECTORY_SEPARATOR ."Views".DIRECTORY_SEPARATOR ."users".DIRECTORY_SEPARATOR ."login.php";
+        include_once($file);
     }
     public function singin()
     {
