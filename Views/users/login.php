@@ -12,10 +12,22 @@ include_once $navbar;
 <body>
 <?php
 include_once $includes."navbar.php";
-
+$str = dirname(__DIR__)."../../Controllers/UserController.php";
 ?>
-<section id="login">
+<section id="loginForm">
+
 <p>Login page</p>
+<form id="loginForm" method="Post">
+Email or username:
+<input type="text" id="loginLogin" name="loginLogin">
+Password:
+<input type="password" id="passwordLogin" name="passwordLogin">
+
+<input type="submit" id="submitLogin" name="loginSubmit" value="login">
+<section id="singinDirct">
+If you don't have a compte <a href="/user/singin">sign up</a>
+</section>
+</form>
 </section>
 
 

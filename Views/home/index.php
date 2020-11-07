@@ -30,6 +30,7 @@ if(isset($ProductsData))
         $ProductsData[$i]['2']."</a></br>";
 
         echo "<div id ='price'>".$ProductsData[$i]['3']." DH"."</div></br>";
+        echo "<input type='number' class='elemQuantity' min='1' value='1'>";
         echo "<button class='buyitem'>buy item</button>";
         echo "</article> ";
 
@@ -50,6 +51,7 @@ if(isset($ProductsData))
             $Products[$i][$j]['2']."</a></br>";
 
             echo "<div id ='price'>".$Products[$i][$j]['3']." DH"."</div></br>";
+            echo "<input type='number' class='elemQuantity' min='1' value='1'>";
             echo "<button class='buyitem'>buy item</button>";
             echo "</article> ";
             }

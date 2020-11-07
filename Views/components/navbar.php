@@ -3,11 +3,11 @@
 <a href="/">Store</a>
 </div>
 <form id="search" action="" method="get">
-<input type="text" name="search"/>
-<input type="button" name="search" value="c"/>
+<input type="text" name="search" id="textsearc"/>
+<input type="button" name="search" value="c" id="btnseach"/>
 </form>
 <div id="login">
-<a href ="#"> Login</a>
+<a href ="/user/login"> Login</a>
 </div>
 <div id="shart">
 b

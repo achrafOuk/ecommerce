@@ -15,6 +15,10 @@ body a
     text-decoration: none;
     color:#fff;
 }
+body input
+{
+    border:none;
+}
 nav {
     background: var(--main-color);
     display: flex;
@@ -31,7 +35,7 @@ nav {
     width: 35%;
 }
 
-input[type="text"] {
+#textsearc{
     padding: 1% 43% 1% 3%;
 }
 input[type="button"] {
@@ -151,6 +155,12 @@ div#itemPrice {
     font-weight: bold;
     font-size: 1.5rem;
 }
+.elemQuantity {
+    border: .1rem solid var(--blue);
+    margin-bottom: 3%;
+    color: var(--blue);
+    width: 90%;
+}
 #buyitem {
     background: var(--blue);
     border: none;
@@ -160,6 +170,47 @@ div#itemPrice {
     font-size: 20px;
 }
 /*---items ends---*/
+
+/*login page*/
+#loginForm,#SinginForm {
+    background: var(--main-color);
+    color: #fff;
+    margin: 5%;
+    padding: 2%;
+}
+section#loginForm, section#loginForm form,#SinginForm, #singinForm  {
+    display: flex;
+    flex-direction: column;
+   
+}
+section#loginForm p,section#loginForm p {
+    
+    font-size: 1.5rem;
+}
+section#loginForm input,#singinForm input {
+    width: 90%;
+    padding: 1%;
+    margin-bottom: 2%;
+    
+}
+
+#submitLogin {
+    border: 0.2rem solid var(--blue);
+    color: var(--blue);
+    font-weight: bold;
+    background: var(--main-color);
+    cursor: pointer;
+}
+input#submitLogin:hover {
+    border: 0.2rem solid var(--blue);
+    background: var(--blue);
+    font-weight: bold;
+    color: var(--sec-color);
+}
+section#singinDirct a {
+    color: var(--blue);
+}
+/**/
 footer {
     background: var(--main-color);
     text-align: center;

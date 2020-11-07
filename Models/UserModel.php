@@ -13,6 +13,14 @@ class UserModel extends Model
         parent::__construct();
         $this->table="compte";
     }
+    public static function login($user,$password)
+    {
+        //check if user exists
+    }
+    public static function singin($user,$email,$password)
+    {
+        //check if user exists
+    }
     
 }
 ?>
