@@ -20,14 +20,8 @@ if(isset($ProductData))
 {
     echo "<section id='product'>";
     echo "<div id='itemTitle'> ".$ProductData[0]['2'].'</div>'."</br>";
-?>
-
-<?php
     echo 
         '<img src = "data:image/png;base64,' . base64_encode( $ProductData[0]['1'] ) . '" width = "250px" height = "250px"/>'."</br>";
-?>
-
-<?php  
     echo "<div id='itemPrice'> ".$ProductData[0]['3']." DH"."</div>"."</br>";
     echo "Details:"."</br>";
     echo $ProductData[0]['4']."</br>";
@@ -50,7 +44,7 @@ if(isset($ProductsData))
         $ProductsData[$i]['2']."</a></br>";
 
         echo "<div id ='price'>".$ProductsData[$i]['3']." DH"."</div></br>";
-        echo "<button class='buyitem'>buy item</button>";
+        echo "<button class='buyitems'>b</button>";
         echo "</article> ";
     }
     echo "</section>";

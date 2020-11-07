@@ -52,8 +52,13 @@ input[type="button"] {
 div#shart {
     cursor: pointer;
     height: 40px;
-    border-radius: 100%;
     font-family: "icons";
+    padding: 0% 1% 0.5% 1%;
+}
+div#shart:hover {
+    background: var(--sec-color);
+    color: var(--blue);
+    padding: 0% 1% 0.5% 1%;
 }
 .section {
     text-align: left;
@@ -120,17 +125,34 @@ div#shart {
     color: var(--blue);
     font-weight: bold;
 }
+.buyitems {
+    
+        border: 0.1rem solid var(--blue) !important;
+        padding: 6%;
+        color: var(--blue);
+        background: none;
+        cursor: pointer;
+        font-family: "icons";
+        border-radius: 100%;
+    
+}
+.buyitems:hover {
+    background: var(--blue);
+    color: var(--sec-color);
+}
 .buyitem {
-    width: 90%;
+    
     border: 0.1rem solid var(--blue) !important;
-    padding: 3%;
+    padding: 6%;
     color: var(--blue);
     background: none;
     cursor: pointer;
+    
+
 }
 .buyitem:hover {
-    background: var(--blue);
-    color: var(--sec-color);
+background: var(--blue);
+color: var(--sec-color);
 }
 #product {
     background: white;

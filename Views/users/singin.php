@@ -17,7 +17,7 @@ include_once $includes."navbar.php";
 <section id="SinginForm">
 
 <p>Singin page</p>
-<form id="singinForm" method="Post" action="#">
+<form id="singinForm" method="Post">
 Username:
 <input type="text" id="loginLogin" name="loginLogin">
 Email:
