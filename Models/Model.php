@@ -21,6 +21,7 @@ class Model
     */
         
         $this->conn = new \mysqli(Model::DB_HOST,Model::DB_USER,Model::DB_PSW,Model::DB_NAME);
+        $this->conn->set_charset("utf-8");
         $myconnect = $this->conn;
     }
     //return the instance of the class

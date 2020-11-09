@@ -8,7 +8,7 @@ class UserModel extends Model
     protected $user_mail;
     protected $user_password;
     protected $is_admin;
-    public function  __const()
+    public function  __construct()
     {
         parent::__construct();
         $this->table="compte";
