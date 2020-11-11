@@ -25,7 +25,7 @@ Email:
 Password:
 <input type="password" id="passwordLogin" name="passwordLogin">
 
-<input type="submit" id="submitLogin" name="signinSubmit" value="login">
+<input type="submit" id="submitLogin" name="signinSubmit" value="singin">
 <section id="singinDirct">
 If you have a compte <a href="/user/login">login</a>
 </section>
