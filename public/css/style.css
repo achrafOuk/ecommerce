@@ -19,6 +19,9 @@ body input
 {
     border:none;
 }
+body input :active {
+    border-style: none !important;
+}
 nav {
     background: var(--main-color);
     display: flex;
@@ -27,6 +30,7 @@ nav {
     font-size: 1.5rem;
     line-height: 2;
 }
+
 #siteName{
     margin-right: 12%;
 }
@@ -36,6 +40,7 @@ nav {
 #search {
     display: flex;
     width: 35%;
+    height: fit-content;
 }
 
 #textsearc{
@@ -52,6 +57,7 @@ input[type="button"] {
     width: 13%;
     margin: 0%;
 }
+
 div#shart {
     cursor: pointer;
     height: 40px;
@@ -63,6 +69,13 @@ div#shart:hover {
     background: var(--sec-color);
     color: var(--blue);
     padding: 0% 1% 0.5% 1%;
+}
+input#user {
+    background: none;
+    color: var(--sec-color);
+    line-height: 3;
+    font-size: 15px;
+    cursor: pointer;
 }
 .section {
     text-align: left;

@@ -9,18 +9,19 @@
 <div id="shart">
 b
 </div>
-<?php if ( empty($_SESSION['user']) ){?>
-<div id="login">
-<a href ="/user/login"> Login</a>
-</div>
-<div id="signin">
-<a href ="/user/singin"> Signin</a>
-</div>
-<?php } 
+<?php
+if ( empty($_SESSION['user']) ){
+echo '<div id="login">';
+echo '<a href ="/user/login"> Login</a>';
+echo '</div>';
+echo '<div id="signin">';
+echo '<a href ="/user/singin"> Signin</a>';
+echo '</div>';
+}
 else {
-    echo "<div id='user'>";
-    echo "Logout";
-    echo "</div>";
+    echo "<form name='logout' method='Post' action='User/logout/'>";
+    echo "<input type='submit' id='user' value='Logout'>";
+    echo "</form>";
 }
 
 ?>

@@ -68,6 +68,12 @@ class UserController
         $file = dirname(__DIR__).DIRECTORY_SEPARATOR ."Views".DIRECTORY_SEPARATOR ."users".DIRECTORY_SEPARATOR ."singin.php";
         include_once($file);
     }
+    public static function logout()
+    {
+        unset($_SESSION['user']);
+        header("Location: /");
+        exit();
+    }
 }
 
 ?>
