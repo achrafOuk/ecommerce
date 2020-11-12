@@ -4,6 +4,20 @@
 </div>
 <form id="search" action="" method="get">
 <input type="text" name="search" id="textsearc"/>
+<select>
+<option value="All">All</option>
+<?php
+    use  app\Models\CategoriesModel;
+    $categorie = new CategoriesModel();
+    $categories = $categorie->fetchAll();
+    print_r($categories);
+    for($i=0;$i<count($categories);$i++)
+    {
+        echo "<option value='{$categories[$i][1]}''>{$categories[$i][1]}</option>";
+    }
+
+?>
+</select>
 <input type="button" name="search" value="c" id="btnseach"/>
 </form>
 <div id="shart">

@@ -42,9 +42,10 @@ class ItemController extends Controller
     {
         //do something
     }
-    public function search()
+    public function search($categories,$item)
     {
         //do something
+        
     }
     public function rename()
     {

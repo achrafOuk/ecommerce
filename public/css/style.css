@@ -32,7 +32,8 @@ nav {
 }
 
 #siteName{
-    margin-right: 12%;
+    margin-right: 4%;
+    margin-left: 6%;
 }
 #login, #shart , #search{
     margin-right: 5%;
@@ -41,6 +42,7 @@ nav {
     display: flex;
     width: 35%;
     height: fit-content;
+    margin-right: 8%;
 }
 
 #textsearc{

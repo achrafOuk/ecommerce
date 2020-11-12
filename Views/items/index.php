@@ -19,12 +19,12 @@ include_once $includes."navbar.php";
 if(isset($ProductData))
 {
     echo "<section id='product'>";
-    echo "<div id='itemTitle'> ".$ProductData[0]['2'].'</div>'."</br>";
+    echo "<div id='itemTitle'> ".utf8_encode($ProductData[0]['2']).'</div>'."</br>";
     echo 
         '<img src = "data:image/png;base64,' . base64_encode( $ProductData[0]['1'] ) . '" width = "250px" height = "250px"/>'."</br>";
     echo "<div id='itemPrice'> ".$ProductData[0]['3']." DH"."</div>"."</br>";
     echo "Details:"."</br>";
-    echo $ProductData[0]['4']."</br>";
+    echo utf8_encode( $ProductData[0]['4'] )."</br>";
     echo "<button id='buyitem'>buy item</button>";
 echo "</section>";
 }
@@ -41,7 +41,7 @@ if(isset($ProductsData))
         echo 
         '<img src = "data:image/png;base64,' . base64_encode( $ProductsData[$i]['1'] ) . '" width = "250px" "/>'."</br>";
         echo "<a href='/item/".$ProductsData[$i]['0']."'>".
-        $ProductsData[$i]['2']."</a></br>";
+        utf8_encode($ProductData[0]['2'])."</a></br>";
 
         echo "<div id ='price'>".$ProductsData[$i]['3']." DH"."</div></br>";
         echo "<button class='buyitems'>b</button>";
