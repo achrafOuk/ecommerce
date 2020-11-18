@@ -1,260 +1,296 @@
-:root
-{
-    --sec-color:#fff;
-    --main-color:#1b252f;
-    --blue:#b11e22;
+:root {
+  --sec-color: #fff;
+  --main-color: #1b252f;
+  --blue: #b11e22;
 }
 
-body{
-    background:var(--sec-color);
-    margin: 0;
-    padding: 0;
+body {
+  background: var(--sec-color);
+  margin: 0;
+  padding: 0;
 }
-body a
-{
-    text-decoration: none;
-    color:#fff;
+body a {
+  text-decoration: none;
+  color: #fff;
 }
-body input
-{
-    border:none;
+body input:focus,
+button:focus,
+option:focus {
+  outline: none;
 }
-body input :active {
-    border-style: none !important;
+body input :active,
+option:active {
+  border-style: none !important;
 }
 nav {
-    background: var(--main-color);
-    display: flex;
-    color: #fff;
-    padding: 1.5% 0% 0% 1.5%;
-    font-size: 1.5rem;
-    line-height: 2;
+  background: var(--main-color);
+  display: flex;
+  color: #fff;
+  padding: 1.5% 0% 0% 1.5%;
+  font-size: 1.5rem;
+  line-height: 2;
 }
 
-#siteName{
-    margin-right: 4%;
-    margin-left: 6%;
+#second {
+  color: var(--main-color);
+  background: var(--sec-color);
+  border-bottom: 0.1rem solid;
+  font-size: 2.2rem;
+  padding: 0.2% 0.2% 0% 1.5%;
 }
-#login, #shart , #search{
-    margin-right: 5%;
+#second div,
+#second a {
+  color: var(--main-color);
+  margin-right: 2%;
+}
+#siteName {
+  margin-right: 4%;
+  margin-left: 6%;
+}
+#login,
+#shart {
+  margin-right: 5%;
 }
 #search {
-    display: flex;
-    width: 35%;
-    height: fit-content;
-    margin-right: 8%;
+  display: flex;
+  width: 35%;
+  height: fit-content;
+  margin-right: 10%;
 }
-
-#textsearc{
-    padding: 1% 43% 1% 3%;
+input:-internal-autofill-selected {
+  background-color: var(--sec-color) !important;
 }
-input[type="button"] {
-    background: var(--blue);
-    color: #fff;
-    padding: 3% 5% 3% 3%;
-    cursor: pointer;
-    font-family: "icons";
-    border: none;
-    height: 3em;
-    width: 13%;
-    margin: 0%;
+#textsearc {
+  padding: 1% 43% 1% 3%;
+}
+#btnseach {
+  background: var(--blue);
+  color: #fff;
+  padding: 3% 5% 3% 3%;
+  cursor: pointer;
+  font-family: "icons";
+  border: none;
+  height: 3em;
+  width: 13%;
+  margin: 0%;
 }
 
 div#shart {
-    cursor: pointer;
-    height: 40px;
-    font-family: "icons";
-    padding: 0% 1% 0.5% 1%;
-    border-radius: 100%;
+  cursor: pointer;
+  height: 40px;
+  font-family: "icons";
+  padding: 0% 1% 0.5% 1%;
+  border-radius: 100%;
 }
 div#shart:hover {
-    background: var(--sec-color);
-    color: var(--blue);
-    padding: 0% 1% 0.5% 1%;
+  background: var(--sec-color);
+  color: var(--blue);
+  padding: 0% 1% 0.5% 1%;
 }
 input#user {
-    background: none;
-    color: var(--sec-color);
-    line-height: 3;
-    font-size: 15px;
-    cursor: pointer;
+  background: none;
+  color: var(--sec-color);
+  line-height: 3;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
 }
 .section {
-    text-align: left;
-    width: 90%;
-    margin: 5% auto;
+  text-align: left;
+  width: 90%;
+  margin: 5% auto;
 }
 .section p {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-left: 9%;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 9%;
 }
 .itemsCat {
-    display: flex;
+  display: flex;
 }
 .items {
-    padding: 3%;
-    line-height: 1.5;
-    background: #fff;
-    overflow-wrap: break-word;
-    width: 21%;
-    text-align: center;
-    margin: 0% 2% 1% 2%;
-    height: 100%;
+  padding: 3%;
+  line-height: 1.5;
+  background: #fff;
+  overflow-wrap: break-word;
+  width: 21%;
+  text-align: center;
+  margin: 0% 2% 1% 2%;
+  height: 100%;
 }
 .items:hover {
-    border-color: #e1e1e1;
-    box-shadow: 0 1px 14px 1px rgba(0,0,0,0.13);
+  border-color: #e1e1e1;
+  box-shadow: 0 1px 14px 1px rgba(0, 0, 0, 0.13);
 }
 .articles p {
-    margin-left: 3% !important;
+  margin-left: 3% !important;
 }
 
 /*---items begins---*/
 #products {
-    display: flex;
-    width: 90%;
-    margin: 2% 5% 0% 5%;
-    flex-wrap: wrap;
+  display: flex;
+  width: 90%;
+  margin: 2% 5% 0% 5%;
+  flex-wrap: wrap;
 }
 .item {
-    
-    padding: 1%;
-    line-height: 1.5;
-    background: #fff;
-    overflow-wrap: break-word;
-    width: 21%;
-    height: 100%;
-    text-align: center;
-    margin: 0% 1% 1% 1%;
+  padding: 1%;
+  line-height: 1.5;
+  background: #fff;
+  overflow-wrap: break-word;
+  width: 21%;
+  height: 100%;
+  text-align: center;
+  margin: 0% 1% 1% 1%;
 }
 .item:hover {
-    border-color: #e1e1e1;
-    box-shadow: 0 1px 14px 1px rgba(0,0,0,0.13);
+  border-color: #e1e1e1;
+  box-shadow: 0 1px 14px 1px rgba(0, 0, 0, 0.13);
 }
 .item img {
-    max-height: 100%;
-    max-width: 100%;
+  max-height: 100%;
+  max-width: 100%;
 }
-.item a, .items a {
-    color: var(--main-color);
-    font-weight: bold;
+.item a,
+.items a {
+  color: var(--main-color);
+  font-weight: bold;
 }
 #price {
-    color: var(--blue);
-    font-weight: bold;
+  color: var(--blue);
+  font-weight: bold;
 }
 .buyitems {
-    
-        border: 0.1rem solid var(--blue) !important;
-        padding: 6%;
-        color: var(--blue);
-        background: none;
-        cursor: pointer;
-        font-family: "icons";
-        border-radius: 100%;
-    
+  border: 0.1rem solid var(--blue) !important;
+  padding: 6%;
+  color: var(--blue);
+  background: none;
+  cursor: pointer;
+  font-family: "icons";
+  border-radius: 100%;
 }
 .buyitems:hover {
-    background: var(--blue);
-    color: var(--sec-color);
+  background: var(--blue);
+  color: var(--sec-color);
 }
 .buyitem {
-    
-    border: 0.1rem solid var(--blue) !important;
-    padding: 6%;
-    color: var(--blue);
-    background: none;
-    cursor: pointer;
-    
-
+  border: 0.1rem solid var(--blue) !important;
+  padding: 6%;
+  color: var(--blue);
+  background: none;
+  cursor: pointer;
 }
 .buyitem:hover {
-background: var(--blue);
-color: var(--sec-color);
+  background: var(--blue);
+  color: var(--sec-color);
 }
 #product {
-    background: white;
-    margin: 5% 10% 10% 10%;
-    line-height: 2;
-    padding: 2%;
+  background: white;
+  margin: 5% 10% 10% 10%;
+  line-height: 2;
+  padding: 2%;
 }
 #itemTitle {
-    font-weight: bold;
-    font-size: 1.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
-#product img
-{
-    width:100%;
+#product img {
+  width: 100%;
 }
 #itemTitle {
-    font-weight: bold;
-    font-size: 1.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 div#itemPrice {
-    color: var(--blue);
-    font-weight: bold;
-    font-size: 1.5rem;
+  color: var(--blue);
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 .elemQuantity {
-    border: .1rem solid var(--blue);
-    margin-bottom: 3%;
-    color: var(--blue);
-    width: 90%;
+  border: 0.1rem solid var(--blue);
+  margin-bottom: 3%;
+  color: var(--blue);
+  width: 90%;
 }
 #buyitem {
-    background: var(--blue);
-    border: none;
-    padding: 2%;
-    width: 100%;
-    color: #fff;
-    font-size: 20px;
+  background: var(--blue);
+  border: none;
+  padding: 2%;
+  width: 100%;
+  color: #fff;
+  font-size: 20px;
+}
+div#pagination {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 0.25rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 2%;
+}
+#pagination a {
+  color: var(--main-color);
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+}
+#pagination a:hover {
+  background: var(--main-color);
+  color: var(--sec-color);
 }
 /*---items ends---*/
 
 /*login page*/
-#loginForm,#SinginForm {
-    background: var(--main-color);
-    color: #fff;
-    margin: 5%;
-    padding: 2%;
+#loginForm,
+#SinginForm {
+  background: var(--main-color);
+  color: #fff;
+  margin: 5%;
+  padding: 2%;
 }
-section#loginForm, section#loginForm form,#SinginForm, #singinForm  {
-    display: flex;
-    flex-direction: column;
-   
+section#loginForm,
+section#loginForm form,
+#SinginForm,
+#singinForm {
+  display: flex;
+  flex-direction: column;
 }
-section#loginForm p,section#loginForm p {
-    
-    font-size: 1.5rem;
+section#loginForm p,
+section#loginForm p {
+  font-size: 1.5rem;
 }
-section#loginForm input,#singinForm input {
-    width: 90%;
-    padding: 1%;
-    margin-bottom: 2%;
-    
+section#loginForm input,
+#singinForm input {
+  width: 90%;
+  padding: 1%;
+  margin-bottom: 2%;
 }
 
 #submitLogin {
-    border: 0.2rem solid var(--blue);
-    color: var(--blue);
-    font-weight: bold;
-    background: var(--main-color);
-    cursor: pointer;
+  border: 0.2rem solid var(--blue);
+  color: var(--blue);
+  font-weight: bold;
+  background: var(--main-color);
+  cursor: pointer;
 }
 input#submitLogin:hover {
-    border: 0.2rem solid var(--blue);
-    background: var(--blue);
-    font-weight: bold;
-    color: var(--sec-color);
+  border: 0.2rem solid var(--blue);
+  background: var(--blue);
+  font-weight: bold;
+  color: var(--sec-color);
 }
 section#singinDirct a {
-    color: var(--blue);
+  color: var(--blue);
 }
 /**/
 footer {
-    background: var(--main-color);
-    text-align: center;
-    padding: 1%;
-    color: #fff;
+  background: var(--main-color);
+  text-align: center;
+  padding: 1%;
+  color: #fff;
 }

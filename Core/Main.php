@@ -64,9 +64,9 @@ class Main
            }
            
            else
-           {
-               
+           { 
                try{
+                
                     $Controller = "app\\Controllers\\" . ucfirst( $params[0] )."Controller";
                     $controller = new $Controller();
                     if ( isset($params[1]) )
@@ -75,6 +75,7 @@ class Main
                         {
                             $action = $params[1];
                             if ( isset($params[2]) ) $param=$params[2];
+                            
                             ( isset($params[2]) ) ? call_user_func_array([$controller, $action], [$param])  : $controller->$action();
                         }
                         else{
@@ -93,7 +94,9 @@ class Main
                catch( \Throwable $e)
                 {
                     echo $e->getMessage()."</br>";
-                    echo "404! error page";
+                    echo $e->getLine()."</br>";
+                    echo $e->getFile()."</br>";
+                    echo "504! error page";
                 }
            }
 

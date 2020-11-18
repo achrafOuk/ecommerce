@@ -29,6 +29,13 @@ class Model
     {
         return $this->conn;
     }
+    public function Count()
+    {
+        $sql_query = "select * from ".$this->table;
+        $result = $this->conn->query($sql_query);
+        $row_cnt = $result->num_rows;
+        return $row_cnt;
+    }
     public function fetchAll()
     {
         $sql_query = "select * from ".$this->table;
@@ -37,7 +44,9 @@ class Model
     }
     public function showByLimit($start,$end)
     {
-        $sql_query = "select * from ".$this->table." limit ".$start.",".$end;
+        //$sql_query = "select * from ".$this->table." limit ".$start.",".$end;
+        $sql_query = "select * from {$this->table} limit {$start},{$end}";
+        echo $sql_query;
         $result = $this->conn->query($sql_query);
         return $result->fetch_all();
     }
