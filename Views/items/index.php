@@ -65,6 +65,10 @@ if(isset($ProductsData))
     }
    
 }
+if(isset($_COOKIE))
+{
+    print_r($_COOKIE);
+}
 ?>
 <?php
 include_once $includes."footer.php";

@@ -31,6 +31,7 @@ class ItemController extends Controller
         $file = dirname(__DIR__).DIRECTORY_SEPARATOR ."Views".DIRECTORY_SEPARATOR ."items".DIRECTORY_SEPARATOR ."index.php";
         include_once($file);
     }
+
     public function page($page=1)
     {
         $items = new ItemModel();
@@ -56,35 +57,7 @@ class ItemController extends Controller
         $file = dirname(__DIR__).DIRECTORY_SEPARATOR ."Views".DIRECTORY_SEPARATOR ."items".DIRECTORY_SEPARATOR ."index.php";
         include_once($file); 
         }
-    }
-    /*
-    public function page($page=1)
-    {
-        //do something
-        $items = new ItemModel();
-        if ($items->getinstence()->connect_errno)
-        {
-            echo "die";
-            die();
-        }
-        /*$file = dirname(__DIR__).DIRECTORY_SEPARATOR ."Views".DIRECTORY_SEPARATOR ."items".DIRECTORY_SEPARATOR ."index.php";
-        include_once($file);
-        
-        $pages_num = $items->Count()/$this->elementNumber;
-        
-        //if($page==1) $this->index();
-         if( $page > $pages_num || $page < 0)
-        {
-            echo "404 page!";
-        }
-        else
-        {
-        $ProductsData = $items->showByLimit($page,$this->elementNumber);
-        $file = dirname(__DIR__).DIRECTORY_SEPARATOR ."Views".DIRECTORY_SEPARATOR ."items".DIRECTORY_SEPARATOR ."index.php";
-        include_once($file); 
-        }
-    }*/
-    
+    }    
     public function create()
     {
         //create new item
@@ -114,7 +87,12 @@ class ItemController extends Controller
     }
     public function rename()
     {
-        //do something
+        //do something 
+    }
+    public function showPanier()
+    {
+        $file = dirname(__DIR__).DIRECTORY_SEPARATOR ."Views".DIRECTORY_SEPARATOR ."panier".DIRECTORY_SEPARATOR ."index.php";
+        include_once($file); 
     }
 
 }

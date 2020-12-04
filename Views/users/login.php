@@ -36,4 +36,6 @@ include_once $includes."footer.php";
 
 ?>
 </body>
+
+<script src="/js/js.js"></script>
 </html>

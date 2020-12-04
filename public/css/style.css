@@ -84,7 +84,7 @@ div#shart {
 }
 div#shart:hover {
   background: var(--sec-color);
-  color: var(--blue);
+  color: var(--blue) !important;
   padding: 0% 1% 0.5% 1%;
 }
 input#user {
@@ -160,7 +160,8 @@ input#user {
   color: var(--blue);
   font-weight: bold;
 }
-.buyitems {
+.buyitems,
+.buyitem {
   border: 0.1rem solid var(--blue) !important;
   padding: 6%;
   color: var(--blue);
@@ -169,7 +170,8 @@ input#user {
   font-family: "icons";
   border-radius: 100%;
 }
-.buyitems:hover {
+.buyitems:hover,
+.buyitem:hover {
   background: var(--blue);
   color: var(--sec-color);
 }
@@ -293,4 +295,16 @@ footer {
   text-align: center;
   padding: 1%;
   color: #fff;
+}
+.itemPanier {
+  display: flex;
+  width: 90%;
+  line-height: 1;
+}
+.itemPanier img {
+  width: 15%;
+}
+.itemPanier p {
+  margin-top: 5%;
+  font-size: 1.2rem;
 }

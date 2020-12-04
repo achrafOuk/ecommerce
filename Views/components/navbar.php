@@ -20,8 +20,8 @@
 
 <button type="submit" id="btnseach" name="seachbtn">c</button>
 </form>
-<div id="shart">
-b
+<div id="shart" >
+<a href="/panier">b</a>
 </div>
 <?php
 if ( empty($_SESSION['user']) ){

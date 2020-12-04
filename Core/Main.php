@@ -4,7 +4,7 @@ namespace app\Core;
 
 
 use app\Controllers\Controller;
-
+use app\Controllers\ItemController;
 class Main 
 {
     public function start()
@@ -67,10 +67,17 @@ class Main
            { 
                try{
                 
-                    $Controller = "app\\Controllers\\" . ucfirst( $params[0] )."Controller";
-                    $controller = new $Controller();
-                    if ( isset($params[1]) )
+                    if($params[0]=='panier')
                     {
+                        $controller = "app\Controllers\ItemController";
+                        $controller = new $controller;
+                        $controller->showPanier();
+                    }
+                    else if ( isset($params[1]) )
+                    {
+                        $Controller = "app\\Controllers\\" . ucfirst( $params[0] )."Controller";
+                        $controller = new $Controller();
+                        #print_r($params[0]);
                         if( method_exists($controller,$params[1]) )
                         {
                             $action = $params[1];
@@ -89,6 +96,7 @@ class Main
                     {
                         $controller->index();
                     }
+                    
                }
                //show a 404 page when controller is not found
                catch( \Throwable $e)
@@ -96,7 +104,7 @@ class Main
                     echo $e->getMessage()."</br>";
                     echo $e->getLine()."</br>";
                     echo $e->getFile()."</br>";
-                    echo "504! error page";
+                    echo "404! error page";
                 }
            }
 
