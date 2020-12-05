@@ -26,11 +26,15 @@ document.querySelectorAll('.buyitems').forEach(
         let imageItem= document.querySelectorAll(".items img")[index].src;
         let title = document.querySelectorAll(".items a ")[index].innerHTML;
         let quality = document.querySelectorAll(".items input")[index].value;
+        let link =document.querySelectorAll(".items a ")[index].href;
+        let price =document.querySelectorAll('.items #price')[index].innerHTML;
         console.log(quality);
          //let imageItem= document.querySelectorAll(".items ")[index].src;
         let item={
           'img':imageItem,
             'title':title,
+            'link':link,
+            'price':price,
             'quality':quality
         }    
         localStorage.setItem("storage"+localStorage.length,JSON.stringify(item));
@@ -38,3 +42,12 @@ document.querySelectorAll('.buyitems').forEach(
 
     })
   })
+  document.querySelector('#slide-menu').addEventListener('click',event =>{
+     if(  document.querySelector('#macarte').style.display ==="block"){
+          document.querySelector('#macarte').style.display = "none";
+     }
+     else
+     {
+   document.querySelector('#macarte').style.display = "block";
+     }
+  });

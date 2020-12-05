@@ -11,7 +11,6 @@ body {
 }
 body a {
   text-decoration: none;
-  color: #fff;
 }
 body input:focus,
 button:focus,
@@ -30,7 +29,9 @@ nav {
   font-size: 1.5rem;
   line-height: 2;
 }
-
+nav a {
+  color: #fff;
+}
 #second {
   color: var(--main-color);
   background: var(--sec-color);
@@ -98,7 +99,7 @@ input#user {
 .section {
   text-align: left;
   width: 90%;
-  margin: 5% auto;
+  margin: 10% auto;
 }
 .section p {
   font-size: 2rem;
@@ -125,7 +126,24 @@ input#user {
 .articles p {
   margin-left: 3% !important;
 }
-
+div#macarte {
+  z-index: 48;
+  width: 19%;
+  background: var(--main-color);
+  position: relative;
+  padding: 1.2%;
+  /* display: none; */
+  overflow: hidden;
+  color: #fff;
+  margin-left: 7%;
+  margin-bottom: -16%;
+  display: none;
+}
+div#mesachetes {
+  overflow-y: scroll;
+  height: fit-content;
+  max-height: 200px;
+}
 /*---items begins---*/
 #products {
   display: flex;
@@ -299,7 +317,8 @@ footer {
 .itemPanier {
   display: flex;
   width: 90%;
-  line-height: 1;
+  line-height: 11;
+  margin-left: 9%;
 }
 .itemPanier img {
   width: 15%;
@@ -307,4 +326,10 @@ footer {
 .itemPanier p {
   margin-top: 5%;
   font-size: 1.2rem;
+}
+
+input.quality {
+  margin-top: 7%;
+  margin-left: 4%;
+  height: fit-content;
 }

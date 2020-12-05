@@ -12,13 +12,14 @@ for(i in localStorage)
       div.classList.add('itemPanier');
       let img = document.createElement('img');
       img.src = Item['img'];
-      let title = document.createElement('p');
+      let title = document.createElement('a');
       title.innerText = Item['title'];
+      title.href=Item['link'];
       title.classList.add('title');
       let quality= Item['quality'];
-      console.log(quality);
-      let Quality= document.createElement("p");
-      Quality.innerText =quality;
+      let Quality= document.createElement("input");
+      Quality.setAttribute('type','number');
+      Quality.value =quality;
       Quality.classList.add('quality');
       div.appendChild(img);
       div.appendChild(title);
