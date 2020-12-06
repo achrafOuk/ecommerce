@@ -22,11 +22,16 @@ for (i in localStorage) {
     Quality.classList.add("quality");
     let price = document.createElement("p");
     price.innerText = Item["price"];
-    Price += parseInt(Item["price"], 10);
+    Price += parseInt(Item["quality"], 10) * parseInt(Item["price"], 10);
+    let deleteButton = document.createElement("p");
+    deleteButton.innerText = "r";
+    deleteButton.classList.add("deletebutton");
+    deleteButton.classList.add(i);
     div.appendChild(img);
     div.appendChild(title);
     div.appendChild(Quality);
     div.appendChild(price);
+    div.appendChild(deleteButton);
     panier.appendChild(div);
   }
 

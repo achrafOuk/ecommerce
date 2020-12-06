@@ -326,6 +326,8 @@ footer {
 .itemPanier p {
   margin-top: 5%;
   font-size: 1.2rem;
+  font-family: "icons";
+  cursor: pointer;
 }
 .itemPanier {
   display: flex;
@@ -345,8 +347,10 @@ input.quality {
   margin-top: 7%;
   margin-left: 4%;
   height: fit-content;
+  width: 5%;
 }
 div#total {
   display: flex;
   font-size: 2rem;
+  margin-left: 9%;
 }
