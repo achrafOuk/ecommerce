@@ -1,31 +1,37 @@
 <html>
+
 <head>
-<title>
-    Store - Home page
-</title>
-<?php
-$includes = dirname(__DIR__).DIRECTORY_SEPARATOR ."components".DIRECTORY_SEPARATOR ;
-$navbar = $includes . "bootstrap.php";
-include_once $navbar;
-?>
-<head>
-<body>
-<?php
-include_once $includes."navbar.php";
+    <title>
+        Store - Home page
+    </title>
+    <?php
+    $includes = dirname(__DIR__) . DIRECTORY_SEPARATOR . "components" . DIRECTORY_SEPARATOR;
+    $navbar = $includes . "bootstrap.php";
+    include_once $navbar;
+    ?>
 
-?>
-<div class ="section">
-<p > Panier </p></br>
+    <head>
 
-<div id="panier">
-     
-</div>
-</div>
+    <body>
+        <?php
+        include_once $includes . "navbar.php";
 
-<?php
-include_once $includes."footer.php";
+        ?>
+        <div class="section">
+            <p> Panier </p></br>
 
-?>
-</body>
-<script src="/js/items.js"></script>
+            <div id="panier">
+            </div>
+            <div id="total"> Total :<div id="price">0</div>DH
+            </div>
+
+        </div>
+
+        <?php
+        include_once $includes . "footer.php";
+
+        ?>
+    </body>
+    <script src="/js/items.js"></script>
+
 </html>

@@ -327,9 +327,26 @@ footer {
   margin-top: 5%;
   font-size: 1.2rem;
 }
-
+.itemPanier {
+  display: flex;
+  width: 90%;
+  margin-left: 9%;
+  text-overflow: revert;
+}
+.itemPanier .title {
+  line-height: 11;
+  color: var(--main-color);
+  font-weight: bold;
+}
+.itemPanier p {
+  line-height: 3;
+}
 input.quality {
   margin-top: 7%;
   margin-left: 4%;
   height: fit-content;
+}
+div#total {
+  display: flex;
+  font-size: 2rem;
 }
