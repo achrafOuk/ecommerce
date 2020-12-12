@@ -48,6 +48,7 @@ function addElementToPanier() {
     let quality = Item["quality"];
     let Quality = document.createElement("input");
     Quality.setAttribute("type", "number");
+    Quality.setAttribute("min", "1");
     Quality.value = quality;
     Quality.classList.add("quality");
     let price = document.createElement("p");
@@ -68,6 +69,21 @@ function addElementToPanier() {
   }
   Totalprice.innerText = Price;
 }
-items = mergeduplicateelement();
 
 addElementToPanier();
+document.querySelectorAll(".quality").forEach((item, index) => {
+  item.addEventListener("change", (event) => {
+    let sum = 0;
+    let items = document.querySelectorAll(".itemPanier");
+    console.log(items.length);
+    for (let i = 0; i < items.length; i++) {
+      let quanitity = document.querySelectorAll(".quality")[i].value;
+      let price = document
+        .querySelectorAll(".itemPanier p")
+        [i].innerHTML.split(" ")[0];
+      price = parseInt(price, 10);
+      sum += price * quanitity;
+    }
+    let total = (document.querySelector("#price").innerHTML = sum);
+  });
+});

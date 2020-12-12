@@ -11,8 +11,6 @@ document.querySelectorAll(".buyitems").forEach((item, index) => {
   item.addEventListener("click", (event) => {
     let imageItem = document.querySelectorAll(".item img")[index].src;
     console.log(imageItem);
-    //  localStorage.setItem("storage"+localStorage.length,imageItem);
-    //   console.log(localStorage);
   });
 });
 
