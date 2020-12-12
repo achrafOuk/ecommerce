@@ -1,12 +1,42 @@
-let i;
-let panier = document.querySelector("#panier");
-let Totalprice = document.querySelector("#price");
-let Price = 0;
-panier.innerHTML = "";
-for (i in localStorage) {
-  let img = document.createElement("img");
-  if (localStorage.getItem(i) && localStorage.getItem(i) != "undefined") {
-    let Item = JSON.parse(localStorage.getItem(i));
+function mergeduplicateelement() {
+  let storageCopie = new Array();
+  for (i in localStorage) {
+    let item = JSON.parse(localStorage.getItem(i));
+    if (item) {
+    }
+    for (j in localStorage) {
+      let item1 = JSON.parse(localStorage.getItem(j));
+      if (
+        item &&
+        item1 &&
+        i != j &&
+        item["title"] === item1["title"] &&
+        item != "undefined"
+      ) {
+        item.quality = parseInt(item1.quality, 10) + parseInt(item.quality, 10);
+      }
+    }
+    let isExists = false;
+    for (k in storageCopie) {
+      if (Object.is(JSON.stringify(storageCopie[k]), JSON.stringify(item))) {
+        isExists = true;
+      }
+    }
+    if (item && item != "undefined" && isExists === false) {
+      storageCopie.push(item);
+    }
+  }
+  return storageCopie;
+}
+function addElementToPanier() {
+  let i;
+  let panier = document.querySelector("#panier");
+  let Totalprice = document.querySelector("#price");
+  let Price = 0;
+  panier.innerHTML = "";
+  let storage = mergeduplicateelement();
+  for (i in storage) {
+    let Item = storage[i];
     let div = document.createElement("div");
     div.classList.add("itemPanier");
     let img = document.createElement("img");
@@ -33,8 +63,11 @@ for (i in localStorage) {
     div.appendChild(price);
     div.appendChild(deleteButton);
     panier.appendChild(div);
-  }
 
-  //   paniier.appendChild()
+    //   paniier.appendChild()
+  }
+  Totalprice.innerText = Price;
 }
-Totalprice.innerText = Price;
+items = mergeduplicateelement();
+
+addElementToPanier();
