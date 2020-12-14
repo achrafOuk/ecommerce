@@ -13,32 +13,40 @@ document.querySelectorAll(".buyitems").forEach((item, index) => {
     console.log(imageItem);
   });
 });
-
-document.querySelectorAll(".buyitem").forEach((item, index) => {
-  item.addEventListener("click", (event) => {
-    let imageItem = document.querySelectorAll(".items img")[index].src;
-    let title = document.querySelectorAll(".items a ")[index].innerHTML;
-    let quality = document.querySelectorAll(".items input")[index].value;
-    let link = document.querySelectorAll(".items a ")[index].href;
-    let price = document.querySelectorAll(".items #price")[index].innerHTML;
-    console.log(quality);
-    //let imageItem= document.querySelectorAll(".items ")[index].src;
-    let item = {
-      img: imageItem,
-      title: title,
-      link: link,
-      price: price,
-      quality: quality,
-      price: price,
-    };
-    localStorage.setItem("storage" + localStorage.length, JSON.stringify(item));
-    //console.log(localStorage);
+function itemAddToshart(className) {
+  document.querySelectorAll(".buyitem").forEach((item, index) => {
+    item.addEventListener("click", (event) => {
+      let imageItem = document.querySelectorAll(className + " img")[index].src;
+      let title = document.querySelectorAll(className + " a")[index].innerHTML;
+      let quality = document.querySelectorAll(className + " input")[index]
+        .value;
+      let link = document.querySelectorAll(className + " a")[index].href;
+      let price = document.querySelectorAll(className + " #price")[index]
+        .innerHTML;
+      console.log(quality);
+      //let imageItem= document.querySelectorAll(".items ")[index].src;
+      let item = {
+        img: imageItem,
+        title: title,
+        link: link,
+        price: price,
+        quality: quality,
+        price: price,
+      };
+      localStorage.setItem(
+        "storage" + localStorage.length,
+        JSON.stringify(item)
+      );
+      //console.log(localStorage);
+    });
   });
-});
-document.querySelector("#slide-menu").addEventListener("click", (event) => {
-  if (document.querySelector("#macarte").style.display === "block") {
-    document.querySelector("#macarte").style.display = "none";
-  } else {
-    document.querySelector("#macarte").style.display = "block";
-  }
-});
+  document.querySelector("#slide-menu").addEventListener("click", (event) => {
+    if (document.querySelector("#macarte").style.display === "block") {
+      document.querySelector("#macarte").style.display = "none";
+    } else {
+      document.querySelector("#macarte").style.display = "block";
+    }
+  });
+}
+itemAddToshart(".item");
+itemAddToshart(".items");

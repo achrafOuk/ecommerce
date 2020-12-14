@@ -30,7 +30,9 @@ function mergeduplicateelement() {
   }
   return storageCopie;
 }
-window.storage = mergeduplicateelement();
+console.log(window.storage);
+if (window.storage === undefined) window.storage = mergeduplicateelement();
+console.log(mergeduplicateelement());
 function addElementToPanier(dataItem) {
   let i;
   let panier = document.querySelector("#panier");
@@ -100,6 +102,7 @@ function fun() {
       addElementToPanier(window.storage);
       console.log(window.storage);
       fun();
+      deleteItem();
       console.log(window.storage[index].quality);
     });
   });
@@ -121,6 +124,8 @@ function deleteItem() {
       }
       let total = (document.querySelector("#price").innerHTML = sum);
       addElementToPanier(window.storage);
+      deleteItem();
+      fun();
     });
   });
 }
