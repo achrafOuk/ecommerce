@@ -319,6 +319,7 @@ footer {
   width: 90%;
   line-height: 11;
   margin-left: 9%;
+  text-overflow: revert;
 }
 .itemPanier img {
   width: 15%;
@@ -327,14 +328,8 @@ footer {
   margin-top: 5%;
   font-size: 1.2rem;
   font-family: "icons";
-  cursor: pointer;
 }
-.itemPanier {
-  display: flex;
-  width: 90%;
-  margin-left: 9%;
-  text-overflow: revert;
-}
+
 .itemPanier .title {
   line-height: 11;
   color: var(--main-color);
@@ -342,6 +337,9 @@ footer {
 }
 .itemPanier p {
   line-height: 3;
+}
+.deletebutton {
+  cursor: pointer;
 }
 input.quality {
   margin-top: 7%;
