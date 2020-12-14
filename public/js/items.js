@@ -104,4 +104,26 @@ function fun() {
     });
   });
 }
+
+function deleteItem() {
+  document.querySelectorAll(".deletebutton").forEach((item, index) => {
+    item.addEventListener("click", (event) => {
+      window.storage.splice(index, 1);
+      let sum = 0;
+      let items = document.querySelectorAll(".itemPanier");
+      for (let i = 0; i < items.length; i++) {
+        let quanitity = document.querySelectorAll(".quality")[i].value;
+        let price = document
+          .querySelectorAll(".itemPanier p")
+          [i].innerHTML.split(" ")[0];
+        price = parseInt(price, 10);
+        sum += price * quanitity;
+      }
+      let total = (document.querySelector("#price").innerHTML = sum);
+      addElementToPanier(window.storage);
+    });
+  });
+}
+
 fun();
+deleteItem();
