@@ -1,0 +1,31 @@
+2020.12.10 22:21:02 INFO  Started: Metals version 0.9.7 in workspace 'C:\xam\htdocs\ecommerce' for client vscode.
+2020.12.10 22:21:14 INFO  time: initialize in 12s
+2020.12.10 22:21:54 WARN  Build server is not auto-connectable.
+2020.12.10 22:21:54 WARN  no build tool detected in workspace 'C:\xam\htdocs\ecommerce'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.11 20:12:16 INFO  Started: Metals version 0.9.7 in workspace 'C:\xam\htdocs\ecommerce' for client vscode.
+2020.12.11 20:12:28 INFO  time: initialize in 12s
+2020.12.11 20:12:50 WARN  Build server is not auto-connectable.
+2020.12.11 20:12:50 WARN  no build tool detected in workspace 'C:\xam\htdocs\ecommerce'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.11 20:32:21 INFO  shutting down Metals
+2020.12.11 23:43:48 INFO  Started: Metals version 0.9.7 in workspace 'C:\xam\htdocs\ecommerce' for client vscode.
+2020.12.11 23:43:50 INFO  time: initialize in 2.65s
+2020.12.11 23:43:55 WARN  Build server is not auto-connectable.
+2020.12.11 23:43:55 WARN  no build tool detected in workspace 'C:\xam\htdocs\ecommerce'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.12 19:30:15 INFO  Started: Metals version 0.9.7 in workspace 'C:\xam\htdocs\ecommerce' for client vscode.
+2020.12.12 19:30:22 INFO  time: initialize in 7.22s
+2020.12.12 19:30:36 WARN  Build server is not auto-connectable.
+2020.12.12 19:30:36 WARN  no build tool detected in workspace 'C:\xam\htdocs\ecommerce'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.13 02:05:04 INFO  shutting down Metals
+2020.12.14 09:52:50 INFO  Started: Metals version 0.9.7 in workspace 'C:\xam\htdocs\ecommerce' for client vscode.
+2020.12.14 09:52:54 INFO  time: initialize in 3.91s
+2020.12.14 09:52:58 WARN  Build server is not auto-connectable.
+2020.12.14 09:52:58 WARN  no build tool detected in workspace 'C:\xam\htdocs\ecommerce'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.14 15:55:57 INFO  Started: Metals version 0.9.7 in workspace 'C:\xam\htdocs\ecommerce' for client vscode.
+2020.12.14 15:55:59 INFO  time: initialize in 2.79s
+2020.12.14 15:56:09 WARN  Build server is not auto-connectable.
+2020.12.14 15:56:09 WARN  no build tool detected in workspace 'C:\xam\htdocs\ecommerce'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.15 10:46:55 INFO  shutting down Metals
+2020.12.16 19:33:32 INFO  Started: Metals version 0.9.7 in workspace 'C:\xam\htdocs\ecommerce' for client vscode.
+2020.12.16 19:33:35 INFO  time: initialize in 3.34s
+2020.12.16 19:33:46 WARN  Build server is not auto-connectable.
+2020.12.16 19:33:46 WARN  no build tool detected in workspace 'C:\xam\htdocs\ecommerce'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
