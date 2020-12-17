@@ -1,3 +1,11 @@
+function createLocalStorage(array) {
+  localStorage.clear();
+  for (index in array) {
+    localStorage.setItem(index.toString(), JSON.stringify(array[index]));
+    console.log(localStorage);
+  }
+}
+
 function mergeduplicateelement() {
   let storageCopie = new Array();
   for (i in localStorage) {
@@ -25,14 +33,17 @@ function mergeduplicateelement() {
       }
     }
     if (item && item != "undefined" && isExists === false) {
+      let obj = {};
       storageCopie.push(item);
+      for (item in storageCopie) {
+        console.log("item2", item, ":", storageCopie[item]);
+      }
     }
   }
   return storageCopie;
 }
-console.log(window.storage);
-if (window.storage === undefined) window.storage = mergeduplicateelement();
 console.log(mergeduplicateelement());
+if (window.storage === undefined) window.storage = mergeduplicateelement();
 function addElementToPanier(dataItem) {
   let i;
   let panier = document.querySelector("#panier");
@@ -40,9 +51,7 @@ function addElementToPanier(dataItem) {
   let Price = 0;
   panier.innerHTML = "";
   window.storage = dataItem;
-  console.log(window.storage);
   for (i in window.storage) {
-    console.log(window.storage[i]);
     let Item = window.storage[i];
     let div = document.createElement("div");
     div.classList.add("itemPanier");
@@ -53,7 +62,6 @@ function addElementToPanier(dataItem) {
     title.href = Item["link"];
     title.classList.add("title");
     let quality = Item["quality"];
-    console.log("item:", Item["quality"]);
     let Quality = document.createElement("input");
     Quality.setAttribute("type", "number");
     Quality.setAttribute("min", "1");
@@ -76,20 +84,19 @@ function addElementToPanier(dataItem) {
   Totalprice.innerText = Price;
 }
 
-console.log(window.storage);
+//console.log(window.storage);
 addElementToPanier(window.storage);
-console.log(window.storage);
+//console.log(window.storage);
 
 function fun() {
   document.querySelectorAll(".quality").forEach((item, index) => {
     item.addEventListener("change", (event) => {
       let sum = 0;
-      console.log(window.storage);
       let items = document.querySelectorAll(".itemPanier");
       window.storage[index].quality = document.querySelectorAll(".quality")[
         index
       ].value;
-      console.log("item1:", window.storage[index].quality);
+      console.log(window.storage[index].quality);
       for (let i = 0; i < items.length; i++) {
         let quanitity = document.querySelectorAll(".quality")[i].value;
         let price = document
@@ -99,11 +106,10 @@ function fun() {
         sum += price * quanitity;
       }
       let total = (document.querySelector("#price").innerHTML = sum);
+      createLocalStorage(window.storage);
       addElementToPanier(window.storage);
-      console.log(window.storage);
       fun();
       deleteItem();
-      console.log(window.storage[index].quality);
     });
   });
 }
@@ -123,6 +129,7 @@ function deleteItem() {
         sum += price * quanitity;
       }
       let total = (document.querySelector("#price").innerHTML = sum);
+      createLocalStorage(window.storage);
       addElementToPanier(window.storage);
       deleteItem();
       fun();
@@ -132,3 +139,4 @@ function deleteItem() {
 
 fun();
 deleteItem();
+//string

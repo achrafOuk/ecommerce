@@ -23,7 +23,6 @@ function itemAddToshart(className) {
       let link = document.querySelectorAll(className + " a")[index].href;
       let price = document.querySelectorAll(className + " #price")[index]
         .innerHTML;
-      console.log(quality);
       //let imageItem= document.querySelectorAll(".items ")[index].src;
       let item = {
         img: imageItem,
@@ -37,6 +36,7 @@ function itemAddToshart(className) {
         "storage" + localStorage.length,
         JSON.stringify(item)
       );
+      console.log("local:", localStorage);
       //console.log(localStorage);
     });
   });
