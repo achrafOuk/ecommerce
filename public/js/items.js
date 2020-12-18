@@ -91,6 +91,7 @@ addElementToPanier(window.storage);
 function fun() {
   document.querySelectorAll(".quality").forEach((item, index) => {
     item.addEventListener("change", (event) => {
+      console.log("1");
       let sum = 0;
       let items = document.querySelectorAll(".itemPanier");
       window.storage[index].quality = document.querySelectorAll(".quality")[
@@ -117,6 +118,7 @@ function fun() {
 function deleteItem() {
   document.querySelectorAll(".deletebutton").forEach((item, index) => {
     item.addEventListener("click", (event) => {
+      console.log("2");
       window.storage.splice(index, 1);
       let sum = 0;
       let items = document.querySelectorAll(".itemPanier");

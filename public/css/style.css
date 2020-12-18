@@ -88,6 +88,17 @@ div#shart:hover {
   color: var(--blue) !important;
   padding: 0% 1% 0.5% 1%;
 }
+#checkout {
+  margin: 20% 9% 9% 9%;
+  font-size: 1.8rem;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  background: var(--blue);
+  padding: 0% 15% 0% 15%;
+  cursor: pointer;
+  color: var(--sec-color);
+}
 input#user {
   background: none;
   color: var(--sec-color);
@@ -97,9 +108,9 @@ input#user {
   border: none;
 }
 .section {
-  text-align: left;
-  width: 90%;
+  width: 80%;
   margin: 10% auto;
+  overflow-x: hidden;
 }
 .section p {
   font-size: 2rem;
@@ -118,6 +129,7 @@ input#user {
   text-align: center;
   margin: 0% 2% 1% 2%;
   height: 100%;
+  width: fit-content;
 }
 .items:hover {
   border-color: #e1e1e1;

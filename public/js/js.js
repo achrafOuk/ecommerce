@@ -7,17 +7,20 @@ document.querySelector("#shart").addEventListener("mouseleave", function () {
 });
 let elements = document.getElementsByClassName("items");
 
-document.querySelectorAll(".buyitems").forEach((item, index) => {
+/*document.querySelectorAll(".buyitems").forEach((item, index) => {
   item.addEventListener("click", (event) => {
     let imageItem = document.querySelectorAll(".item img")[index].src;
     console.log(imageItem);
   });
-});
-function itemAddToshart(className) {
-  document.querySelectorAll(".buyitem").forEach((item, index) => {
+});*/
+function itemAddToshart(className, buttonClass) {
+  document.querySelectorAll(buttonClass).forEach((item, index) => {
     item.addEventListener("click", (event) => {
+      console.log("index:", index);
       let imageItem = document.querySelectorAll(className + " img")[index].src;
       let title = document.querySelectorAll(className + " a")[index].innerHTML;
+      console.log("title:", title);
+      console.log("=======");
       let quality = document.querySelectorAll(className + " input")[index]
         .value;
       let link = document.querySelectorAll(className + " a")[index].href;
@@ -36,8 +39,6 @@ function itemAddToshart(className) {
         "storage" + localStorage.length,
         JSON.stringify(item)
       );
-      console.log("local:", localStorage);
-      //console.log(localStorage);
     });
   });
   document.querySelector("#slide-menu").addEventListener("click", (event) => {
@@ -48,5 +49,5 @@ function itemAddToshart(className) {
     }
   });
 }
-itemAddToshart(".item");
-itemAddToshart(".items");
+itemAddToshart(".items", ".buyitem");
+itemAddToshart(".item", ".buyitems");

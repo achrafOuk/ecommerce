@@ -40,6 +40,7 @@ class UserController
         $file = dirname(__DIR__).DIRECTORY_SEPARATOR ."Views".DIRECTORY_SEPARATOR ."users".DIRECTORY_SEPARATOR ."login.php";
         include_once($file);
     }
+
     public function singin($argms=[])
     {
         //do something
@@ -75,5 +76,3 @@ class UserController
         exit();
     }
 }
-
-?>
