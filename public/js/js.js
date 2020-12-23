@@ -41,13 +41,14 @@ function itemAddToshart(className, buttonClass) {
       );
     });
   });
-  document.querySelector("#slide-menu").addEventListener("click", (event) => {
-    if (document.querySelector("#macarte").style.display === "block") {
-      document.querySelector("#macarte").style.display = "none";
-    } else {
-      document.querySelector("#macarte").style.display = "block";
-    }
-  });
 }
+document.querySelector("#slide-menu").addEventListener("click", (event) => {
+  if (document.querySelector("#macarte").style.display === "block") {
+    document.querySelector("#macarte").style.display = "none";
+  } else {
+    document.querySelector("#macarte").style.display = "block";
+  }
+});
+
 itemAddToshart(".items", ".buyitem");
 itemAddToshart(".item", ".buyitems");

@@ -48,6 +48,10 @@
 
 <div id="macarte">
     <div id="mesachetes">
+        <?php
+
+
+        ?>
         <p>Home</p>
         <p>Home1</p>
         <p>Home2</p>
