@@ -25,10 +25,10 @@ function mergeduplicateelement() {
       }
     }
     let isExists = false;
-    for (k in window.storageCopie) {
-      if (
-        Object.is(JSON.stringify(window.storageCopie[k]), JSON.stringify(item))
-      ) {
+    for (k in storageCopie) {
+      console.log("item:", JSON.stringify(storageCopie[k]));
+      console.log("items1:", JSON.stringify(item));
+      if (Object.is(JSON.stringify(storageCopie[k]), JSON.stringify(item))) {
         isExists = true;
       }
     }
@@ -36,13 +36,13 @@ function mergeduplicateelement() {
       let obj = {};
       storageCopie.push(item);
       for (item in storageCopie) {
-        console.log("item2", item, ":", storageCopie[item]);
+        //console.log("item2", item, ":", storageCopie[item]);
       }
     }
   }
   return storageCopie;
 }
-console.log(mergeduplicateelement());
+mergeduplicateelement();
 if (window.storage === undefined) window.storage = mergeduplicateelement();
 function addElementToPanier(dataItem) {
   let i;
