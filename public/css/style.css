@@ -151,6 +151,9 @@ div#macarte {
   margin-bottom: -16%;
   display: none;
 }
+#mesachetes a {
+  color: var(--sec-color) r;
+}
 div#mesachetes {
   overflow-y: scroll;
   height: fit-content;

@@ -49,14 +49,10 @@
 <div id="macarte">
     <div id="mesachetes">
         <?php
-
-
+        for ($i = 0; $i < count($categories); $i++) {
+            echo "<a href='#'>{$categories[$i][1]}</a></br>";
+        }
         ?>
-        <p>Home</p>
-        <p>Home1</p>
-        <p>Home2</p>
-        <p>Home3</p>
-        <p>Home4</p>
-        <p>Home5</p>
+
     </div>
 </div>
