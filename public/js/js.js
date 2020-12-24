@@ -1,18 +1,5 @@
-document.querySelector("#shart").addEventListener("mouseover", function () {
-  document.querySelector("#shart a").style.color = "#b11e22";
-});
-
-document.querySelector("#shart").addEventListener("mouseleave", function () {
-  document.querySelector("#shart a").style.color = "white";
-});
 let elements = document.getElementsByClassName("items");
 
-/*document.querySelectorAll(".buyitems").forEach((item, index) => {
-  item.addEventListener("click", (event) => {
-    let imageItem = document.querySelectorAll(".item img")[index].src;
-    console.log(imageItem);
-  });
-});*/
 function itemAddToshart(className, buttonClass) {
   document.querySelectorAll(buttonClass).forEach((item, index) => {
     item.addEventListener("click", (event) => {
