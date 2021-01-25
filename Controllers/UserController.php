@@ -19,14 +19,24 @@ class UserController
             $password = $_POST["passwordLogin"];
             if (empty($user) || empty($password)) {
                 // echo "error!";
+                echo "<script type='text/javascript'> 
+                alert('hello');
+                </script>
+                ";
             } else {
                 $userInfo = $auth->login($user, $password);
 
                 if ($userInfo && password_verify($password, $userInfo['Compte_passwd'])) {
                     $_SESSION['user'] = $user;
                     $_SESSION['level'] = $userInfo['Compte_type'];
-                    header("Location: /");
-                    exit();
+                    echo "
+                    <script type=\"text/javascript\">
+                    localStorage.clear();
+                    window.location.replace('/');
+                    </script>
+                    ";
+                    //header("Location: /");
+                    //exit();
                 } else {
                     echo "password is wrong!";
                 }

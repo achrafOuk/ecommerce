@@ -46,9 +46,9 @@ nav a {
 #second div,
 #second a {
   color: var(--main-color);
-  margin-right: 1%;
-  word-break: unset;
-  width: 12%;
+  margin-right: 3%;
+  white-space: nowrap;
+  cursor: pointer;
 }
 #siteName {
   margin-right: 4%;

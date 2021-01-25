@@ -1,0 +1,7 @@
+SELECT sum(value) income,DATE_FORMAT(date, '%Y-%m')   FROM `purchases` GROUP BY DATE_FORMAT(date, '%Y-%m')
+
+SELECT * FROM `purchases` GROUP BY DATE_FORMAT(date, '%Y-%m') having  DATE_FORMAT(date, '%Y-%m') =DATE_FORMAT(NOW(), '%Y-%m')
+
+SELECT sum(value) FROM `purchases` where DATE_FORMAT(date, '%Y-%m')=DATE_FORMAT(now(), '%Y-%m')
+
+
