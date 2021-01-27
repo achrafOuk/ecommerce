@@ -11,6 +11,7 @@
     ?>
     <link rel="stylesheet" type="text/css" href="/css/admin.css" target="_blank">
 
+
     <head>
 
     <body>
@@ -24,18 +25,40 @@
                 <section id="count">
                     <div class="card">
                         <p class="disc">income</p>
-                        2000DH
+                        <?php echo ($income[0][0]) . "DH"; ?>
                     </div>
                     <div class="card">
 
                         <p class="disc">item ventes</p>
-                        5
+                        <?php echo ($elements[0][0]); ?>
+
                     </div>
 
                 </section>
+                <canvas id="myChart" width="400" height="400"></canvas>
             </section>
         </div>
+
     </body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script>
+        console.log("hello");
+        let ctx = document.getElementById('myChart').getContext('2d');
+        console.log(<?php echo json_encode($incomemonth); ?>);
+        let myLineChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: <?php echo json_encode($months); ?>,
+                datasets: [{
+                    label: "income this year by month",
+                    fill: false,
+                    borderColor: "#b11e22",
+                    pointBorderColor: "#b11e22",
+                    data: <?php echo json_encode($incomemonth); ?>
+                }]
+            }
+        });
+    </script>
 
 
 </html>
