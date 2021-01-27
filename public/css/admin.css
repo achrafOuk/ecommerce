@@ -24,3 +24,53 @@
   color: var(--sec-color);
   white-space: nowrap;
 }
+#items {
+  display: flex;
+  flex-direction: column;
+}
+.gestion {
+  display: flex;
+  padding: 0.5%;
+  background: #fff;
+  overflow-wrap: break-word;
+  height: 100%;
+  margin: 1% 1% 1% 1%;
+  background-color: var(--main-color);
+  color: #fff;
+}
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin-left: 2%;
+  cursor: pointer;
+}
+.update {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+button.btn.delete {
+  color: #fff;
+  background-color: #bd2130;
+  border-color: #b21f2d;
+}
+.itemName {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  color: #fff;
+  font-weight: bold;
+}

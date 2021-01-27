@@ -82,8 +82,6 @@ class ItemController extends Controller
                 include_once($file);
             }
         }
-        
-        //else header("Location: /");
     }
     public function rename()
     {
@@ -96,5 +94,3 @@ class ItemController extends Controller
     }
 
 }
-
-?>

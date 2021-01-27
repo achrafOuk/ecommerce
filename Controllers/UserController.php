@@ -29,6 +29,14 @@ class UserController
                 if ($userInfo && password_verify($password, $userInfo['Compte_passwd'])) {
                     $_SESSION['user'] = $user;
                     $_SESSION['level'] = $userInfo['Compte_type'];
+                    if ($_SESSION['level'] == "Admin") {
+                        echo "
+                    <script type=\"text/javascript\">
+                    localStorage.clear();
+                    window.location.replace('/admin');
+                    </script>
+                    ";
+                    }
                     echo "
                     <script type=\"text/javascript\">
                     localStorage.clear();

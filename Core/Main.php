@@ -73,9 +73,9 @@ class Main
                             header("Location: /");
                             exit;
                         } else {
-                            if ($_SESSION['level'] == "Admin")
+                            if ($_SESSION['level'] == "Admin") {
                                 $controller->index();
-                            else {
+                            } else {
                                 header("Location: /");
                                 exit;
                             }

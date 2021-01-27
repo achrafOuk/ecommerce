@@ -3,6 +3,7 @@
 namespace app\Controllers;
 
 use  app\Models\Adminmodel;
+use app\Models\ItemModel;
 
 class AdminController
 {
@@ -19,6 +20,13 @@ class AdminController
             $months[$i] = $monthIncome[$i][1];
             $incomemonth[$i] = $monthIncome[$i][2];
         }
+        include_once($file);
+    }
+    public function management()
+    {
+        $file = dirname(__DIR__) . DIRECTORY_SEPARATOR . "Views" . DIRECTORY_SEPARATOR . "admin" . DIRECTORY_SEPARATOR . "stock.php";
+        $items = new ItemModel();
+        $item = $items->showByLimit(0, 5);
         include_once($file);
     }
 }
