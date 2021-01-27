@@ -16,21 +16,21 @@
 
     <body>
         <div id="panel">
-            <nav id="adminbar">
-                <a href="/admin">statisics</a></br>
-                <a href="">stock managment</a>
-            </nav>
-
+            <?php
+            $includes = dirname(__DIR__) . DIRECTORY_SEPARATOR . "components" . DIRECTORY_SEPARATOR;
+            $navbar = $includes . "sidebar.php";
+            include_once $navbar;
+            ?>
             <section id="items">
+                <p id="management">Stock management</p>
                 <?php
                 for ($i = 0; $i < 5; $i++) {
                     echo "<div class='gestion'>";
                     echo "<a href='#' class='itemName'>";
                     echo $item[$i][2];
                     echo "</a>";
-                    echo "<button type='button' class='btn update'>update</button>";
-                    echo "<button type='button' class='btn delete'>delete</button>";
-
+                    echo "<a class='btn update' href='/item/update/{$item[$i][0]}'>update</a>";
+                    echo "<a class='btn delete' href='/item/delete/{$item[$i][0]}'>delete</a>";
                     echo "</div>";
                 }
                 ?>

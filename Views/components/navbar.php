@@ -18,10 +18,8 @@
                 for ($i = 0; $i < count($categories); $i++) {
                     echo "<option value='{$categories[$i][1]}''>{$categories[$i][1]}</option>";
                 }
-
                 ?>
            </select>
-
            <button type="submit" id="btnseach" name="seachbtn">c</button>
        </form>
        <div id="shart">

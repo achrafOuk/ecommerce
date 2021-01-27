@@ -11,16 +11,15 @@
     ?>
     <link rel="stylesheet" type="text/css" href="/css/admin.css" target="_blank">
 
-
     <head>
 
     <body>
         <div id="panel">
-            <nav id="adminbar">
-                <a href="/admin">statisics</a></br>
-                <a href="">stock managment</a>
-            </nav>
-
+            <?php
+            $includes = dirname(__DIR__) . DIRECTORY_SEPARATOR . "components" . DIRECTORY_SEPARATOR;
+            $navbar = $includes . "sidebar.php";
+            include_once $navbar;
+            ?>
             <section id="stats">
                 <section id="count">
                     <div class="card">

@@ -43,6 +43,8 @@ class ItemModel extends Model
     public function delete($index)
     {
         //do something
+        $sql_query = "delete from {$this->table} where product_id={$index}";
+        $result = $this->conn->query($sql_query);
     }
     public function search($categorie, $item)
     {

@@ -30,13 +30,13 @@
 }
 .gestion {
   display: flex;
-  padding: 0.5%;
+  padding: 0.5% 1% 0% 0%;
   background: #fff;
   overflow-wrap: break-word;
-  height: 100%;
   margin: 1% 1% 1% 1%;
   background-color: var(--main-color);
   color: #fff;
+  height: 43px;
 }
 .btn {
   display: inline-block;
@@ -61,10 +61,11 @@
   background-color: #28a745;
   border-color: #28a745;
 }
-button.btn.delete {
+.btn.delete {
   color: #fff;
   background-color: #bd2130;
   border-color: #b21f2d;
+  margin-left: 9%;
 }
 .itemName {
   text-overflow: ellipsis;
